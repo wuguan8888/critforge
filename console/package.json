@@ -1,0 +1,10 @@
+{
+  "name": "critforge-console",
+  "private": true,
+  "version": "0.0.0-m0",
+  "description": "CritForge operator console (M0 placeholder, no app code yet)",
+  "scripts": {
+    "dev": "echo 'console placeholder — no app in M0' && exit 0",
+    "build": "echo 'console placeholder — no app in M0' && exit 0"
+  }
+}

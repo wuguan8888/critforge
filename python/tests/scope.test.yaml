@@ -1,0 +1,16 @@
+project: "TEST-lab-engagement"
+allowlist:
+  - "example.com"
+  - "*.lab.example.com"
+  - "10.0.0.5"
+  - "2001:db8::1"
+denylist:
+  - "secret.lab.example.com"
+  - "do-not-touch.example.com"
+severity_gate: "High"
+model_routing:
+  planner: "p"
+  worker: "w"
+  verifier: "v"
+authorized_by: "Test Harness"
+authorization_reference: "TICKET-1"

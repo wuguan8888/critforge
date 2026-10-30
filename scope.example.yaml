@@ -1,0 +1,28 @@
+# CritForge scope file — EXAMPLE / PLACEHOLDER VALUES ONLY.
+# Copy to scope.yaml and replace with YOUR authorized engagement details.
+# CritForge is authorized-use-only. Running against systems you are not
+# explicitly authorized to test is prohibited.
+
+project: "EXAMPLE-lab-engagement"
+
+# allowlist: the ONLY targets CritForge may act on. Empty = refuse to run.
+allowlist:
+  - "example.com"          # EXAMPLE lab domain — replace
+  - "lab.example.com"      # EXAMPLE lab host — replace
+
+# denylist: explicitly excluded even if they match something above.
+denylist:
+  - "do-not-touch.example.com"  # EXAMPLE — replace
+
+# severity_gate: only findings at/above this level pass the gate. Default: High
+severity_gate: "High"
+# Dual-axis: minimum confidence to surface (low|medium|high|confirmed)
+confidence_gate: "medium"
+
+model_routing:
+  planner: "deepseek-reasoner"
+  worker: "deepseek-chat"
+  verifier: "deepseek-chat"
+
+authorized_by: "EXAMPLE — replace with the person who authorized this test"
+authorization_reference: "EXAMPLE — ticket/contract/engagement ref"

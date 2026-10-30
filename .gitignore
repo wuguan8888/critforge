@@ -1,0 +1,23 @@
+/bin/
+*.jsonl
+scope.yaml
+node_modules/
+
+# Python backend
+.venv/
+python/scope.yaml
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Secrets & local artifacts (never commit)
+.env
+.env.*
+!.env.example
+secrets.yaml
+python/secrets.yaml
+*.pem
+*.key
+lab/
+range_artifacts/
+.github/workflows/

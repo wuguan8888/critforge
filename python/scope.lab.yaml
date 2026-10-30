@@ -1,0 +1,29 @@
+# CritForge LOCAL LAB scope — loopback only. Authorized self-deployed targets.
+project: "critforge-local-lab"
+
+allowlist:
+  - "127.0.0.1"
+  - "localhost"
+# Authorized self-deployed loopback lab services (host-level allowlist above covers them):
+#   127.0.0.1:3000  OWASP Juice Shop
+#   127.0.0.1:8080  OWASP WebGoat   (/WebGoat)
+#   127.0.0.1:8888  OWASP crAPI web + API gateway (identity / community / workshop services)
+#   127.0.0.1:8765  stdlib vuln lab
+#   127.0.0.1:8025  crAPI MailHog (mail API service of the crAPI stack)
+
+denylist: []
+
+# Recorded targets awaiting a SIGNED authorization. Not scannable (fail-closed).
+pending_authorization:
+  - "kuaishou.com"   # status: pending — no recon/testing until signed authorization arrives
+
+severity_gate: "High"
+confidence_gate: "medium"
+
+model_routing:
+  planner: "deepseek-reasoner"
+  worker: "deepseek-chat"
+  verifier: "deepseek-chat"
+
+authorized_by: "Ernest (local box owner) — self-authorized Juice Shop, WebGoat, crAPI + stdlib lab range test"
+authorization_reference: "CritForge COMPLEX LAB — Juice Shop 127.0.0.1:3000; WebGoat 127.0.0.1:8080/WebGoat; crAPI 127.0.0.1:8888; stdlib lab :8765; kuaishou.com PENDING"
